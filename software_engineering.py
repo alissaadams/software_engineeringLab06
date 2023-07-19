@@ -10,7 +10,7 @@ def encode(password):   # adds 3 to each number in password
     return result
 
 
-def decode(password): # shift each digit down by 3 numbers
+def decode(password):  # shift each digit down by 3 numbers
     encoded_password = [str(int(i) - 3) for i in password]
     res = ''.join(encoded_password)
 
