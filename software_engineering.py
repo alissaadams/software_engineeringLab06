@@ -1,3 +1,6 @@
+# Alissa Adams
+# Ngoc Nguyen
+
 def encode(password):   # adds 3 to each number in password
     result = ''
     for element in password:
@@ -7,8 +10,11 @@ def encode(password):   # adds 3 to each number in password
     return result
 
 
-def decode():
-    pass
+def decode(password): # shift each digit down by 3 numbers
+    encoded_password = [str(int(i) - 3) for i in password]
+    res = ''.join(encoded_password)
+
+    return res
 
 
 def print_menu():
@@ -22,6 +28,7 @@ def print_menu():
 
 def main():
     program_continue = True
+    password = None
 
     while program_continue:
         print_menu()
@@ -35,7 +42,8 @@ def main():
 
         # decodes password
         elif option == 2:
-            pass
+            print(f'The encoded password is {encode(password)}, and the '
+                  f'original password is {password}.')
 
         # quits program
         elif option == 3:
